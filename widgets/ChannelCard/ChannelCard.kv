@@ -1,0 +1,73 @@
+<ChannelCard>:
+    height: '100dp'
+    size_hint: (1, None)
+
+    MDFillRoundFlatButton:
+        elevation: 0
+        md_bg_color: 0, 0, 0, 0
+        padding: '10dp'
+        rounded_button: False
+        # size: self.size
+        size_hint: (1, 1)
+
+        MDBoxLayout:
+            orientation: 'vertical'
+
+            MDBoxLayout:
+                adaptive_height: True
+                orientation: 'horizontal'
+                spacing: '10dp'
+
+                MDAnchorLayout:
+                    anchor: 'left', 'top'
+
+                    MDLabel:
+                        bold: True
+                        halign: 'left'
+                        max_lines: 3
+                        multiline: True
+                        size_hint: 1, 1
+                        text: root.name
+                        text_size: self.size
+                        valign: 'top'
+
+                MDAnchorLayout:
+                    anchor: 'right', 'top'
+                    size: dp(60), dp(60)
+                    size_hint: None, None
+
+                    canvas:
+                        Color:
+                            rgba: 1, 1, 1, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            source: root.image_source
+                            radius: [dp(10)]
+
+            MDBoxLayout:
+                orientation: 'horizontal'
+
+                MDAnchorLayout:
+                    anchor: 'left', 'bottom'
+
+                    MDLabel:
+                        font_size: '12sp'
+                        max_lines: 1
+                        opacity: 0.5
+                        text: root.last_update
+                        text_size: self.size
+                        valign: 'bottom'
+
+                MDAnchorLayout:
+                    anchor: 'right', 'bottom'
+
+                    MDLabel:
+                        halign: 'right'
+                        font_size: '12sp'
+                        max_lines: 1
+                        opacity: .5
+                        text: root.teacher_name
+                        text_size: self.size
+                        valign: 'bottom'
+                        

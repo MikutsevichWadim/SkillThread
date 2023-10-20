@@ -1,0 +1,18 @@
+#:import MDSlideTransition kivymd.uix.transition.MDSlideTransition
+
+#:include ./widgets/widgets.kv
+#:include ./screens/screens.kv
+
+
+MDScreenManager:
+	current: 'login'
+	transition: MDSlideTransition()
+
+	# ChannelCreateScreen:
+	# ChannelHomeScreen:
+	# ChannelProfileScreen:
+	HomeScreen:
+	LoginScreen:
+	# ProfileScreen:
+	# SettingsScreen:
+	SignupScreen:

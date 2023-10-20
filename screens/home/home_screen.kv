@@ -1,0 +1,54 @@
+<HomeScreen>:
+
+    MDNavigationLayout:
+
+        MDScreenManager:
+
+            MDScreen:
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+
+                    MDTopAppBar:
+                        left_action_items: [['menu', root.open_menu]]
+                        title: 'Главная'
+                    
+                    MDBoxLayout:
+
+                        MDScrollView:
+
+                            MDBoxLayout:
+                                adaptive_height: True
+                                id: channel_list
+                                orientation: 'vertical'
+                                padding: '10dp', '20dp'
+                                spacing: '10dp'
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            width: '250dp'
+
+            MDScrollView:
+
+                MDList:
+
+                    OneLineIconListItem:
+                        text: 'Профиль'
+                        # on_release: root.switch_screen('profile')
+
+                        IconLeftWidget:
+                            icon: 'account'
+
+                    OneLineIconListItem:
+                        text: 'Создать канал'
+                        # on_release: root.switch_screen('channel_create')
+                        
+                        IconLeftWidget:
+                            icon: 'account-group'
+
+                    OneLineIconListItem:
+                        text: 'Настройки'
+                        # on_release: root.switch_screen('settings')
+                        
+                        IconLeftWidget:
+                            icon: 'assets/icons/settings.png'

@@ -1,0 +1,60 @@
+<LoginScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+
+        MDAnchorLayout:
+            anchor_y: 'top'
+
+            MDBoxLayout:
+                adaptive_height: True
+                orientation: 'vertical'
+                spasing: dp(50)
+
+                MDLabel:
+                    bold: True
+                    font_size: sp(24)
+                    halign: 'center'
+                    text: 'SkillThread'
+
+                MDLabel:
+                    halign: 'center'
+                    text: 'Учебное приложение\nдля преподавателей и учащихся'
+
+        MDAnchorLayout:
+            anchor_y: 'center'
+            padding: dp(20)
+
+            MDBoxLayout:
+                adaptive_height: True
+                orientation: 'vertical'
+                pos_hint: (1, 1)
+
+                MDTextField:
+                    hint_text: 'Электронная почта'
+                    id: email
+
+                MDTextField:
+                    hint_text: 'Пароль'
+                    id: password
+                    password: True
+
+        MDAnchorLayout:
+            anchor_y: 'bottom'
+
+            MDBoxLayout:
+                adaptive_height: True
+                orientation: 'vertical'
+                size_hint: 1,None
+
+                MDRectangleFlatButton:
+                    on_release: root.login()
+                    pos_hint_x: 0.5
+                    size_hint: 1,1
+                    text: 'Войти'
+
+                MDFlatButton:
+                    on_release: root.go_to_signup()
+                    pos_hint_x: 0.5
+                    size_hint_x: 1
+                    text: 'Регистрация'
