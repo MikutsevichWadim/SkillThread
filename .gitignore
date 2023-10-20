@@ -1,1 +1,4 @@
 .buildozer
+.ssh
+./__pycache__
+bin
